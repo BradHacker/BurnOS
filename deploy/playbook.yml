@@ -1,0 +1,8 @@
+---
+- name: Deploy BurnOS to Linux
+  hosts: linux_lan
+  become: yes
+  roles:
+    - linux-burnos
+  tags:
+    - burn

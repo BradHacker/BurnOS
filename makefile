@@ -1,3 +1,7 @@
+dev32:
+	nasm -o out/burn32.bin src/burn_32.asm
+	qemu-system-x86_64 out/burn32.bin
+
 dev:
 	nasm -o out/burn.bin src/burn.asm
 	qemu-system-x86_64 out/burn.bin

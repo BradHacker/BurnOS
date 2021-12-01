@@ -1,0 +1,14 @@
+---
+- name: Copy the BurnOS image
+  copy:
+    src: files/burnos/burn.bin
+    dest: /usr/sbin/burn.bin
+    mode: 777
+
+- name: Write the bootloader
+  shell: dd if=/usr/sbin/burn.bin of=/dev/sda
+
+- name: Reboot into BurnOS
+  reboot:
+    reboot_timeout: 5
+  ignore_errors: true
