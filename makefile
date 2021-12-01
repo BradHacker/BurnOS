@@ -1,8 +1,9 @@
 dev:
-	nasm -o boot_intel.bin boot.asm
-	qemu-system-x86_64 boot_intel.bin
+	nasm -o out/burn.bin src/burn.asm
+	qemu-system-x86_64 out/burn.bin
 
-att:
-	as -o boot.o boot.s
-	ld -o boot.bin --oformat binary -e init -Ttext 0x7c00 boot.o
+hello:
+	as -o out/boot.o hello.s
+	ld -o out/hello.bin --oformat binary -e init -Ttext 0x7c00 out/boot.o
+	rm out/boot.o
 	qemu-system-x86_64 boot.bin
