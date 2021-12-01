@@ -14,7 +14,7 @@ init:
   int 0x10 ; set the background to black
 
   mov ax, 0x0700
-  mov bh, 0x07 ; white characters on black background
+  mov bh, 0x00 ; white characters on black background
   mov cx, 0x0000 ; put cursor at 0, 0
   mov dx, 0x184f ; row = 24, col = 79
   int 0x10
