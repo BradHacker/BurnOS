@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\student\source\repos\BurnOS\BurnOSWindowsDropper\main.cpp(12,20): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  BurnOSWindowsDropper.vcxproj -> C:\Users\student\source\repos\BurnOS\BurnOSWindowsDropper\Release\BurnOSWindowsDropper.exe
