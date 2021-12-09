@@ -1,10 +1,10 @@
 dev32:
 	nasm -o out/burn32.bin src/burn_32.asm
-	qemu-system-x86_64 out/burn32.bin
+	qemu-system-x86_64 -drive file=out/burn32.bin,format=raw
 
 dev:
 	nasm -o out/burn.bin src/burn.asm
-	qemu-system-x86_64 out/burn.bin
+	qemu-system-x86_64 -drive file=out/burn.bin,format=raw
 
 hello:
 	as -o out/boot.o hello.s
